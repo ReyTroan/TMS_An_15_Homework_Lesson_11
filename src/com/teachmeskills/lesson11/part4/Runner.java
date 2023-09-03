@@ -1,7 +1,6 @@
 package com.teachmeskills.lesson11.part4;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class Runner {
 
@@ -9,9 +8,9 @@ public class Runner {
 
         ArrayList<Orders> listOrder = new ArrayList<>();
 
-        Orders orders3 = new Orders(333333, 333);
         Orders orders1 = new Orders(111111, 111);
         Orders orders2 = new Orders(222222, 222);
+        Orders orders3 = new Orders(333333, 333);
 
         listOrder.add(orders3);
         listOrder.add(orders1);
@@ -21,7 +20,7 @@ public class Runner {
             System.out.println(order);
         }
 
-        Collections.sort(listOrder, new OrderComparator());
+        listOrder.sort(new OrderComparator());
 
         for (Orders order : listOrder){
             System.out.println("Sorted " + order);
